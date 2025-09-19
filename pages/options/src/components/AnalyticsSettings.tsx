@@ -47,7 +47,7 @@ export const AnalyticsSettings: React.FC<AnalyticsSettingsProps> = ({ isDarkMode
     return (
       <section className="space-y-6">
         <div
-          className={`rounded-lg border ${isDarkMode ? 'border-slate-700 bg-slate-800' : 'border-blue-100 bg-gray-50'} p-6 text-left shadow-sm`}>
+          className={`rounded-lg border ${isDarkMode ? 'border-slate-700 bg-slate-800' : 'border-emerald-100 bg-gray-50'} p-6 text-left shadow-sm`}>
           <h2 className={`mb-4 text-xl font-semibold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
             Analytics Settings
           </h2>
@@ -64,7 +64,7 @@ export const AnalyticsSettings: React.FC<AnalyticsSettingsProps> = ({ isDarkMode
     return (
       <section className="space-y-6">
         <div
-          className={`rounded-lg border ${isDarkMode ? 'border-slate-700 bg-slate-800' : 'border-blue-100 bg-gray-50'} p-6 text-left shadow-sm`}>
+          className={`rounded-lg border ${isDarkMode ? 'border-slate-700 bg-slate-800' : 'border-emerald-100 bg-gray-50'} p-6 text-left shadow-sm`}>
           <h2 className={`mb-4 text-xl font-semibold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
             Analytics Settings
           </h2>
@@ -90,7 +90,7 @@ export const AnalyticsSettings: React.FC<AnalyticsSettingsProps> = ({ isDarkMode
               <label
                 htmlFor="analytics-enabled"
                 className={`text-base font-medium ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`}>
-                Help improve Nanobrowser
+                Help improve Lamyda
               </label>
               <div className="relative inline-block w-12 select-none">
                 <input
@@ -103,7 +103,7 @@ export const AnalyticsSettings: React.FC<AnalyticsSettingsProps> = ({ isDarkMode
                 <label
                   htmlFor="analytics-enabled"
                   className={`block h-6 cursor-pointer overflow-hidden rounded-full ${
-                    settings.enabled ? 'bg-blue-500' : isDarkMode ? 'bg-gray-600' : 'bg-gray-300'
+                    settings.enabled ? 'bg-emerald-500' : isDarkMode ? 'bg-gray-600' : 'bg-gray-300'
                   }`}>
                   <span className="sr-only">Toggle analytics</span>
                   <span
@@ -151,7 +151,7 @@ export const AnalyticsSettings: React.FC<AnalyticsSettingsProps> = ({ isDarkMode
             <div
               className={`rounded-md border p-4 ${isDarkMode ? 'border-yellow-700 bg-yellow-900/20' : 'border-yellow-200 bg-yellow-50'}`}>
               <p className={`text-sm ${isDarkMode ? 'text-yellow-300' : 'text-yellow-700'}`}>
-                Analytics disabled. You can re-enable it anytime to help improve Nanobrowser.
+                Analytics disabled. You can re-enable it anytime to help improve Lamyda.
               </p>
             </div>
           )}
