@@ -1,22 +1,22 @@
 /* Add this at the top of the file */
 body {
-  border-color: rgb(6, 78, 59) !important; /* emerald-200 color */
+  border-color: #8061FF !important; /* lamyada purple color */
 }
 
 /* Remove unused classes: .App, .App-logo, .App-header */
 
 code {
-  background: rgba(110, 231, 183, 0.4);
+  background: rgba(128, 97, 255, 0.2);
   border-radius: 0.25rem;
   padding: 0.2rem 0.5rem;
-  color: #047857;
+  color: #2600C8;
 }
 
 /* Dark mode support for code */
 @media (prefers-color-scheme: dark) {
   code {
-    background: rgba(6, 78, 59, 0.4);
-    color: #6ee7b7;
+    background: rgba(38, 0, 200, 0.3);
+    color: #8061FF;
   }
 }
 
@@ -26,30 +26,30 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0fdf4;
+  background: #f0f4ff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #10b981;
+  background: #8061FF;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #059669;
+  background: #6b46ff;
 }
 
 /* Dark mode scrollbar */
 @media (prefers-color-scheme: dark) {
   ::-webkit-scrollbar-track {
-    background: #1e293b;
+    background: #2A2949;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #10b981;
+    background: #8061FF;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #34d399;
+    background: #a855f7;
   }
 }
 
@@ -60,13 +60,13 @@ code {
   align-items: center;
   padding: 0.75rem;
   background-color: transparent;
-  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+  border-bottom: 1px solid rgba(128, 97, 255, 0.2);
 }
 
 /* Dark mode header border */
 @media (prefers-color-scheme: dark) {
   .header {
-    border-bottom: 1px solid rgba(16, 185, 129, 0.3);
+    border-bottom: 1px solid rgba(128, 97, 255, 0.3);
   }
 }
 
@@ -82,26 +82,26 @@ code {
 }
 
 .header-icon {
-  color: #10b981;
+  color: #8061FF;
   cursor: pointer;
   transition: color 0.2s ease;
   opacity: 0.8;
 }
 
 .header-icon:hover {
-  color: #059669;
+  color: #6b46ff;
   opacity: 1;
 }
 
 .send-button {
-  color: #10b981;
+  color: #8061FF;
   cursor: pointer;
   transition: color 0.2s ease;
   opacity: 0.8;
 }
 
 .send-button:hover {
-  color: #059669;
+  color: #6b46ff;
   opacity: 1;
 }
 
@@ -122,30 +122,30 @@ code {
 }
 
 .scrollbar-gutter-stable::-webkit-scrollbar-track {
-  background: #f0fdf4;  /* emerald-50 */
+  background: #f0f4ff;  /* primary-50 */
 }
 
 .scrollbar-gutter-stable::-webkit-scrollbar-thumb {
-  background: #6ee7b7;  /* emerald-300 - very light green */
+  background: #a5b8ff;  /* primary-300 - very light purple */
   border-radius: 4px;
 }
 
 .scrollbar-gutter-stable::-webkit-scrollbar-thumb:hover {
-  background: #34d399;  /* emerald-400 - slightly darker on hover */
+  background: #8061ff;  /* primary-400 - slightly darker on hover */
 }
 
 /* Dark mode scrollbar for scrollbar-gutter-stable */
 @media (prefers-color-scheme: dark) {
   .scrollbar-gutter-stable::-webkit-scrollbar-track {
-    background: #1e293b;  /* slate-800 */
+    background: #2A2949;  /* lamyada background */
   }
   
   .scrollbar-gutter-stable::-webkit-scrollbar-thumb {
-    background: #10b981;  /* emerald-500 */
+    background: #8061FF;  /* lamyada purple */
   }
   
   .scrollbar-gutter-stable::-webkit-scrollbar-thumb:hover {
-    background: #34d399;  /* emerald-400 */
+    background: #a855f7;  /* accent-500 */
   }
 }
 
@@ -156,10 +156,10 @@ code {
   }
   
   .dark-mode-bg {
-    background-color: #1e293b !important; /* slate-800 */
+    background-color: #2A2949 !important; /* lamyada background */
   }
   
   .dark-mode-border {
-    border-color: #475569 !important; /* slate-600 */
+    border-color: #8061FF !important; /* lamyada purple */
   }
 }

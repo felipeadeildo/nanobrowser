@@ -47,8 +47,8 @@ export const AnalyticsSettings: React.FC<AnalyticsSettingsProps> = ({ isDarkMode
     return (
       <section className="space-y-6">
         <div
-          className={`rounded-lg border ${isDarkMode ? 'border-slate-700 bg-slate-800' : 'border-emerald-100 bg-gray-50'} p-6 text-left shadow-sm`}>
-          <h2 className={`mb-4 text-xl font-semibold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+          className={`rounded-lg border ${isDarkMode ? 'border-slate-700 bg-slate-800' : 'border-primary-100 bg-gray-50'} p-6 text-left shadow-sm`}>
+          <h2 className={`mb-4 text-xl font-semibold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
             Analytics Settings
           </h2>
           <div className="animate-pulse">
@@ -64,8 +64,8 @@ export const AnalyticsSettings: React.FC<AnalyticsSettingsProps> = ({ isDarkMode
     return (
       <section className="space-y-6">
         <div
-          className={`rounded-lg border ${isDarkMode ? 'border-slate-700 bg-slate-800' : 'border-emerald-100 bg-gray-50'} p-6 text-left shadow-sm`}>
-          <h2 className={`mb-4 text-xl font-semibold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+          className={`rounded-lg border ${isDarkMode ? 'border-slate-700 bg-slate-800' : 'border-primary-100 bg-gray-50'} p-6 text-left shadow-sm`}>
+          <h2 className={`mb-4 text-xl font-semibold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
             Analytics Settings
           </h2>
           <p className={`${isDarkMode ? 'text-red-400' : 'text-red-600'}`}>Failed to load analytics settings.</p>
@@ -78,7 +78,7 @@ export const AnalyticsSettings: React.FC<AnalyticsSettingsProps> = ({ isDarkMode
     <section className="space-y-6">
       <div
         className={`rounded-lg border ${isDarkMode ? 'border-slate-700 bg-slate-800' : 'border-blue-100 bg-gray-50'} p-6 text-left shadow-sm`}>
-        <h2 className={`mb-4 text-xl font-semibold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+        <h2 className={`mb-4 text-xl font-semibold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
           Analytics Settings
         </h2>
 
@@ -89,7 +89,7 @@ export const AnalyticsSettings: React.FC<AnalyticsSettingsProps> = ({ isDarkMode
             <div className="flex items-center justify-between">
               <label
                 htmlFor="analytics-enabled"
-                className={`text-base font-medium ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`}>
+                className={`text-base font-medium ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>
                 Help improve Lamyda
               </label>
               <div className="relative inline-block w-12 select-none">
@@ -103,7 +103,7 @@ export const AnalyticsSettings: React.FC<AnalyticsSettingsProps> = ({ isDarkMode
                 <label
                   htmlFor="analytics-enabled"
                   className={`block h-6 cursor-pointer overflow-hidden rounded-full ${
-                    settings.enabled ? 'bg-emerald-500' : isDarkMode ? 'bg-gray-600' : 'bg-gray-300'
+                    settings.enabled ? 'bg-primary-500' : isDarkMode ? 'bg-gray-600' : 'bg-gray-300'
                   }`}>
                   <span className="sr-only">Toggle analytics</span>
                   <span
@@ -122,7 +122,7 @@ export const AnalyticsSettings: React.FC<AnalyticsSettingsProps> = ({ isDarkMode
           {/* Information about what we collect */}
           <div
             className={`rounded-md border p-4 ${isDarkMode ? 'border-slate-600 bg-slate-700' : 'border-gray-200 bg-gray-100'}`}>
-            <h3 className={`text-base font-medium ${isDarkMode ? 'text-gray-200' : 'text-gray-700'} mb-4`}>
+            <h3 className={`text-base font-medium ${isDarkMode ? 'text-white' : 'text-gray-700'} mb-4`}>
               What we collect:
             </h3>
             <ul
@@ -133,7 +133,7 @@ export const AnalyticsSettings: React.FC<AnalyticsSettingsProps> = ({ isDarkMode
               <li>Anonymous usage statistics</li>
             </ul>
 
-            <h3 className={`mb-4 mt-6 text-base font-medium ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`}>
+            <h3 className={`mb-4 mt-6 text-base font-medium ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>
               What we DON&apos;T collect:
             </h3>
             <ul

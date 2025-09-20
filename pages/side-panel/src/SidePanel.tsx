@@ -999,21 +999,21 @@ const SidePanel = () => {
   return (
     <div>
       <div
-        className={`flex h-screen flex-col ${isDarkMode ? 'bg-slate-900' : "bg-[url('/bg.jpg')] bg-cover bg-no-repeat"} overflow-hidden border ${isDarkMode ? 'border-emerald-800' : 'border-[rgb(110,231,183)]'} rounded-2xl`}>
+        className={`flex h-screen flex-col ${isDarkMode ? 'bg-slate-900' : 'bg-gradient-to-br from-primary-50 to-primary-100'} overflow-hidden border ${isDarkMode ? 'border-primary-800' : 'border-primary-300'} rounded-2xl`}>
         <header className="header relative">
           <div className="header-logo flex items-center gap-2">
             {showHistory ? (
               <button
                 type="button"
                 onClick={() => handleBackToChat(false)}
-                className={`${isDarkMode ? 'text-emerald-400 hover:text-emerald-300' : 'text-emerald-400 hover:text-emerald-500'} cursor-pointer`}
+                className={`${isDarkMode ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'} cursor-pointer`}
                 aria-label={t('nav_back_a11y')}>
                 {t('nav_back')}
               </button>
             ) : (
               <>
                 <img src="/icon-128.png" alt="Lamyda Logo" className="size-6" />
-                <span className={`text-lg font-semibold ${isDarkMode ? 'text-emerald-200' : 'text-emerald-700'}`}>
+                <span className={`text-lg font-semibold ${isDarkMode ? 'text-white' : 'text-primary-800'}`}>
                   Lamyda
                 </span>
               </>
@@ -1026,7 +1026,7 @@ const SidePanel = () => {
                   type="button"
                   onClick={handleNewChat}
                   onKeyDown={e => e.key === 'Enter' && handleNewChat()}
-                  className={`header-icon ${isDarkMode ? 'text-emerald-400 hover:text-emerald-300' : 'text-emerald-400 hover:text-emerald-500'} cursor-pointer`}
+                  className={`header-icon ${isDarkMode ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'} cursor-pointer`}
                   aria-label={t('nav_newChat_a11y')}
                   tabIndex={0}>
                   <PiPlusBold size={20} />
@@ -1035,7 +1035,7 @@ const SidePanel = () => {
                   type="button"
                   onClick={handleLoadHistory}
                   onKeyDown={e => e.key === 'Enter' && handleLoadHistory()}
-                  className={`header-icon ${isDarkMode ? 'text-emerald-400 hover:text-emerald-300' : 'text-emerald-400 hover:text-emerald-500'} cursor-pointer`}
+                  className={`header-icon ${isDarkMode ? 'text-primary-400 hover:text-primary-300' : 'text-primary-600 hover:text-primary-700'} cursor-pointer`}
                   aria-label={t('nav_loadHistory_a11y')}
                   tabIndex={0}>
                   <GrHistory size={20} />
@@ -1069,9 +1069,9 @@ const SidePanel = () => {
             {/* Show loading state while checking model configuration */}
             {hasConfiguredModels === null && (
               <div
-                className={`flex flex-1 items-center justify-center p-8 ${isDarkMode ? 'text-emerald-300' : 'text-emerald-600'}`}>
+                className={`flex flex-1 items-center justify-center p-8 ${isDarkMode ? 'text-primary-300' : 'text-primary-600'}`}>
                 <div className="text-center">
-                  <div className="mx-auto mb-4 size-8 animate-spin rounded-full border-2 border-emerald-400 border-t-transparent"></div>
+                  <div className="mx-auto mb-4 size-8 animate-spin rounded-full border-2 border-primary-400 border-t-transparent"></div>
                   <p>{t('status_checkingConfig')}</p>
                 </div>
               </div>
@@ -1080,10 +1080,10 @@ const SidePanel = () => {
             {/* Show setup message when no models are configured */}
             {hasConfiguredModels === false && (
               <div
-                className={`flex flex-1 items-center justify-center p-8 ${isDarkMode ? 'text-emerald-300' : 'text-emerald-600'}`}>
+                className={`flex flex-1 items-center justify-center p-8 ${isDarkMode ? 'text-primary-300' : 'text-primary-600'}`}>
                 <div className="max-w-md text-center">
                   <img src="/icon-128.png" alt="Lamyda Logo" className="mx-auto mb-4 size-12" />
-                  <h3 className={`mb-2 text-lg font-semibold ${isDarkMode ? 'text-emerald-200' : 'text-emerald-700'}`}>
+                  <h3 className={`mb-2 text-lg font-semibold ${isDarkMode ? 'text-white' : 'text-primary-800'}`}>
                     {t('welcome_title')}
                   </h3>
                   <p className="mb-4">{t('welcome_instruction')}</p>
@@ -1091,8 +1091,8 @@ const SidePanel = () => {
                     onClick={() => chrome.runtime.openOptionsPage()}
                     className={`my-4 rounded-lg px-4 py-2 font-medium transition-colors ${
                       isDarkMode
-                        ? 'bg-emerald-600 text-white hover:bg-emerald-700'
-                        : 'bg-emerald-500 text-white hover:bg-emerald-600'
+                        ? 'bg-primary-600 text-white hover:bg-primary-700'
+                        : 'bg-primary-500 text-white hover:bg-primary-600'
                     }`}>
                     {t('welcome_openSettings')}
                   </button>
@@ -1107,7 +1107,7 @@ const SidePanel = () => {
                 {messages.length === 0 && (
                   <>
                     <div
-                      className={`border-t ${isDarkMode ? 'border-emerald-900' : 'border-emerald-100'} mb-2 p-2 shadow-sm backdrop-blur-sm`}>
+                      className={`border-t ${isDarkMode ? 'border-primary-900' : 'border-primary-100'} mb-2 p-2 shadow-sm backdrop-blur-sm`}>
                       <ChatInput
                         onSendMessage={handleSendMessage}
                         onStopTask={handleStopTask}
@@ -1145,7 +1145,7 @@ const SidePanel = () => {
                 )}
                 {messages.length > 0 && (
                   <div
-                    className={`border-t ${isDarkMode ? 'border-emerald-900' : 'border-emerald-100'} p-2 shadow-sm backdrop-blur-sm`}>
+                    className={`border-t ${isDarkMode ? 'border-primary-900' : 'border-primary-100'} p-2 shadow-sm backdrop-blur-sm`}>
                     <ChatInput
                       onSendMessage={handleSendMessage}
                       onStopTask={handleStopTask}

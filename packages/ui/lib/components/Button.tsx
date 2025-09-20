@@ -13,25 +13,24 @@ export function Button({ theme, variant = 'primary', className, disabled, childr
       className={cn(
         'py-1 px-4 rounded shadow transition-all',
         {
-          // Primary variant
-          'bg-emerald-500 hover:bg-emerald-600 text-white hover:scale-105':
+          // Primary variant - usando cores da Lamyada
+          'bg-primary-800 hover:bg-primary-700 text-white hover:scale-105':
             variant === 'primary' && !disabled && theme !== 'dark',
-          'bg-emerald-600 hover:bg-emerald-700 text-white hover:scale-105':
+          'bg-primary-700 hover:bg-primary-600 text-white hover:scale-105':
             variant === 'primary' && !disabled && theme === 'dark',
-          'bg-gray-400 text-gray-600 cursor-not-allowed': variant === 'primary' && disabled,
+          'bg-secondary-400 text-secondary-600 cursor-not-allowed': variant === 'primary' && disabled,
 
-          // Secondary variant
-          'bg-gray-300 hover:bg-gray-400 text-gray-800 hover:scale-105': variant === 'secondary' && !disabled,
-          'bg-gray-100 text-gray-400 cursor-not-allowed': variant === 'secondary' && disabled,
+          // Secondary variant - usando cores derivadas
+          'bg-secondary-300 hover:bg-secondary-400 text-secondary-800 hover:scale-105':
+            variant === 'secondary' && !disabled,
+          'bg-secondary-200 text-secondary-500 cursor-not-allowed': variant === 'secondary' && disabled,
 
-          // Danger variant
-          // Note: bg-red-400 causes the button to appear black (RGB 0,0,0) for unknown reasons
-          // Using bg-red-500 with opacity to achieve a softer look
-          'bg-red-600 bg-opacity-80 hover:bg-red-700 hover:bg-opacity-90 text-white hover:scale-105':
+          // Danger variant - mantendo vermelho mas com tons mais suaves
+          'bg-red-600 hover:bg-red-700 text-white hover:scale-105':
             variant === 'danger' && !disabled && theme !== 'dark',
-          'bg-red-500 bg-opacity-70 hover:bg-red-700 hover:bg-opacity-90 text-white hover:scale-105':
+          'bg-red-500 hover:bg-red-600 text-white hover:scale-105':
             variant === 'danger' && !disabled && theme === 'dark',
-          'bg-red-300 bg-opacity-80 text-red-100 cursor-not-allowed': variant === 'danger' && disabled,
+          'bg-red-300 text-red-100 cursor-not-allowed': variant === 'danger' && disabled,
         },
         className,
       )}

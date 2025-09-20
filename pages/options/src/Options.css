@@ -20,16 +20,17 @@
 }
 
 code {
-  background: rgba(148, 163, 184, 0.5);
+  background: rgba(128, 97, 255, 0.2);
   border-radius: 0.25rem;
   padding: 0.2rem 0.5rem;
+  color: #2600C8;
 }
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
   code {
-    background: rgba(30, 58, 138, 0.4);
-    color: #7dd3fc;
+    background: rgba(38, 0, 200, 0.3);
+    color: #8061FF;
   }
   
   .dark-mode-text {
@@ -37,10 +38,10 @@ code {
   }
   
   .dark-mode-bg {
-    background-color: #1e293b !important; /* slate-800 */
+    background-color: #2A2949 !important; /* lamyada background */
   }
   
   .dark-mode-border {
-    border-color: #475569 !important; /* slate-600 */
+    border-color: #8061FF !important; /* lamyada purple */
   }
 }

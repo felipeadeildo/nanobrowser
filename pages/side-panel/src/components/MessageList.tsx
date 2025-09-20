@@ -40,7 +40,7 @@ function MessageBlock({ message, isSameActor, isDarkMode = false }: MessageBlock
     <div
       className={`flex max-w-full gap-3 ${
         !isSameActor
-          ? `mt-4 border-t ${isDarkMode ? 'border-emerald-800/50' : 'border-emerald-200/50'} pt-4 first:mt-0 first:border-t-0 first:pt-0`
+          ? `mt-4 border-t ${isDarkMode ? 'border-primary-800/50' : 'border-primary-200/50'} pt-4 first:mt-0 first:border-t-0 first:pt-0`
           : ''
       }`}>
       {!isSameActor && (
@@ -54,7 +54,7 @@ function MessageBlock({ message, isSameActor, isDarkMode = false }: MessageBlock
 
       <div className="min-w-0 flex-1">
         {!isSameActor && (
-          <div className={`mb-1 text-sm font-semibold ${isDarkMode ? 'text-gray-200' : 'text-gray-900'}`}>
+          <div className={`mb-1 text-sm font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
             {actor.name}
           </div>
         )}
@@ -63,7 +63,7 @@ function MessageBlock({ message, isSameActor, isDarkMode = false }: MessageBlock
           <div className={`whitespace-pre-wrap break-words text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
             {isProgress ? (
               <div className={`h-1 overflow-hidden rounded ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`}>
-                <div className="h-full animate-progress bg-emerald-500" />
+                <div className="h-full animate-progress bg-primary-500" />
               </div>
             ) : (
               message.content

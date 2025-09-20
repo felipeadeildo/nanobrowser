@@ -94,7 +94,7 @@ export default function ChatInput({
   return (
     <form
       onSubmit={handleSubmit}
-      className={`overflow-hidden rounded-lg border transition-colors ${disabled ? 'cursor-not-allowed' : 'focus-within:border-emerald-400 hover:border-emerald-400'} ${isDarkMode ? 'border-slate-700' : ''}`}
+      className={`overflow-hidden rounded-lg border transition-colors ${disabled ? 'cursor-not-allowed' : 'focus-within:border-primary-400 hover:border-primary-400'} ${isDarkMode ? 'border-slate-700' : ''}`}
       aria-label={t('chat_input_form')}>
       <div className="flex flex-col">
         <textarea
@@ -166,7 +166,7 @@ export default function ChatInput({
               onClick={handleReplay}
               disabled={!historicalSessionId}
               aria-disabled={!historicalSessionId}
-              className={`rounded-md bg-green-500 px-3 py-1 text-white transition-colors hover:enabled:bg-green-600 ${!historicalSessionId ? 'cursor-not-allowed opacity-50' : ''}`}>
+              className={`rounded-md px-4 py-2 text-white font-medium shadow-lg transition-all duration-200 hover:enabled:scale-105 ${!historicalSessionId ? 'cursor-not-allowed opacity-50 bg-gray-400' : 'bg-[#a855f7] hover:bg-[#9333ea]'}`}>
               {t('chat_buttons_replay')}
             </button>
           ) : (
@@ -174,7 +174,11 @@ export default function ChatInput({
               type="submit"
               disabled={isSendButtonDisabled}
               aria-disabled={isSendButtonDisabled}
-              className={`rounded-md bg-[#10b981] px-3 py-1 text-white transition-colors hover:enabled:bg-[#059669] ${isSendButtonDisabled ? 'cursor-not-allowed opacity-50' : ''}`}>
+              className={`rounded-md px-4 py-2 text-white font-medium shadow-lg transition-all duration-200 ${
+                isSendButtonDisabled
+                  ? 'cursor-not-allowed opacity-50 bg-gray-400'
+                  : 'bg-[#5b21b6] hover:bg-[#4c1d95] hover:scale-105'
+              }`}>
               {t('chat_buttons_send')}
             </button>
           )}
